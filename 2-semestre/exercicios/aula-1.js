@@ -10,4 +10,3 @@ if (aluno == "joao") {
 else {
     console.log("Aluno não encontrado");
 }
-
