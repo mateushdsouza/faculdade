@@ -146,7 +146,7 @@ idade = 20;
 n1 = 100
 
     if(n1 % 2 == 0){
-        console.log("O numero e par");
+        console.log("EX20: O numero e par");
     }else{
-        console.log("O numero e impar");
+        console.log("EX20: O numero e impar");
     }
