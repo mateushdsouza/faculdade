@@ -1,0 +1,118 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de OBJETO em JavaScript</title>
+  </head>
+
+  <body>
+    <h1>OBJECT EM JavaScript</h1>
+    <h2>Exemblo de Objeto em JavaScript</h2>
+    <p id="saida"></p>
+
+    <h3>Atividade 1 – Criar um Objeto Simples</h3>
+    <p id="ex1"></p>
+
+    <h3>Atividade 2 – Adicionar e Remover Propriedades</h3>
+    <p id="ex2"></p>
+
+    <h3>Atividade 3 – Criar um Método</h3>
+    <p id="ex3"></p>
+
+    <h3>Atividade 4 – Array de Objetos</h3>
+    <p id="ex4"></p>
+
+    <h3>Atividade 5 – Alterando Valores do Objeto</h3>
+    <p id="preco-original"></p>
+    <p id="preco-alterado"></p>
+    <p id="estoque"></p>
+    <p id="estoque-posvenda"></p>
+
+
+    <script>
+      // Criando um objeto "aluno"
+      const aluno = {
+        nome: "Mateus",
+        idade: 18,
+        curso: "Analise e Desenvolvimento de Sistemas",
+        ativo: true,
+        apresentar: function() {
+          return (`Ola, meu nome e ${this.nome} e eu curso ${this.curso}`);
+        }
+      };
+
+      console.log(aluno.nome);
+      console.log(aluno.idade);
+
+      console.log(aluno.apresentar());
+
+      document.getElementById("saida").innerHTML = 
+        aluno.apresentar() + "<br>Idade: " + aluno.idade;
+
+    // EXERCICIO 1
+      const carro = {
+        marca: "Chevrolet",
+        modelo: "Camaro",
+        ano: 2019
+      };
+
+      document.getElementById("ex1").innerHTML = JSON.stringify(carro);
+    
+    // EXERCICIO 2
+      carro.cor = "Vermelho";
+      delete carro.ano;
+
+      document.getElementById("ex2").innerHTML = JSON.stringify(carro);
+
+    // EXERCICIO 3
+      const pessoa = {
+        nome: "Mateus",
+        idade: 18,
+        apresentar: function() {
+          return (`Ola, meu nome e ${this.nome} e eu tenho ${this.idade}`);
+        }
+      };
+
+      document.getElementById("ex3").innerHTML = JSON.stringify(pessoa) + "<br>" + aluno.apresentar();
+
+    // EXERCICIO 4
+      const alunos = [
+      {
+        nome: "Mateus",
+        idade: 18,
+        curso: "ADS",
+      },
+      {
+        nome: "Joao",
+        idade: 19,
+        curso: "Agronomia"
+      },
+      {
+        nome: "Luiz",
+        idade: 20,
+        curso: "Psicologia"
+      }
+    ];
+
+    document.getElementById("ex4").innerHTML = alunos[0].nome + "<br>" + alunos[2].curso;
+
+  // EXERCICIO 5
+    const produto = {
+      nome: "Moletom",
+      preco: "R$120",
+      estoque: 10
+    }
+
+    document.getElementById("preco-original").innerHTML = "Preco original: " + produto.preco;
+    produto.preco = "R$130"
+    document.getElementById("preco-alterado").innerHTML = "Preco alterado: " + produto.preco;
+    document.getElementById("estoque").innerHTML = "Estoque atual: " + produto.estoque;
+    produto.estoque -= 1;
+    document.getElementById("estoque-posvenda").innerHTML = "Estoque apos a venda: " + produto.estoque;
+
+    </script>
+  </body>
+
+  </html>
