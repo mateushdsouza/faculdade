@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+
+<body>
+  <form autocomplete="on">
+    <h1>Formulario de Cadastro</h1>
+
+    <label for="nome">Nome completo:</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo" required autocomplete="name">
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="Digite seu email" required autocomplete="email">
+    <br><br>
+
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required autocomplete="new-password">
+    <br><br>
+
+    <label for="masculino">Masculino</label>
+    <input type="radio" name="genero" id="masculino" value="masculino"> <br>
+
+    <label for="feminino">Feminino</label>
+    <input type="radio" name="genero" id="feminino" value="feminino"> <br>
+
+    <label for="outro">Outro</label>
+    <input type="radio" name="genero" id="outro" value="outro">
+    <br><br>
+
+    <label for="musica">Música</label>
+    <input type="checkbox" name="interesses[]" id="musica" value="musica">
+
+    <label for="leitura">Leitura</label>
+    <input type="checkbox" name="interesses[]" id="leitura" value="leitura">
+
+    <label for="esportes">Esportes</label>
+    <input type="checkbox" name="interesses[]" id="esportes" value="esportes">
+    <br><br>
+
+    <label for="areadetexto">Area de texto:</label> <br>
+    <textarea name="areadetexto" id="areadetexto" rows="4"></textarea>
+    <br><br>
+
+    <button type="submit">Cadastrar</button>
+  </form>
+</body>
+
+</html>
