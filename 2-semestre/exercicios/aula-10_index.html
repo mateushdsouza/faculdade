@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagina</title>
+
+  <style>
+    img {
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="topo">Lista de Atividades de HTML</h1>
+    <nav>
+      <a href="#tabela">Tabela</a> |
+      <a href="#formulario">Formulario</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Atividade 1</h2>
+    <h3>Subtitulo</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <em>Maiores, error dolore porro eum rerum voluptates</em> illo ratione sed quis quam saepe, vel quisquam praesentium, <br> dolorem ea uexercitationem? Ratione?</p>
+    <ul>
+      <li>Pizza</li>
+      <li>Salada</li>
+      <li>Chocolate</li>
+    </ul>
+    <ol>
+      <li>Misturar os ingredientes secos</li>
+      <li>Adicionar os ovos e o leite</li>
+      <li>Levar ao forno</li>
+    </ol>
+    <a href="https://www.google.com">link</a> <br>
+    <img src="assets/Acer_Wallpaper_01_3840x2400.jpg" alt="Acer Wallpaper 01 3840x2400">
+
+    <h2>Atividade 2</h2>
+    <h3 id="tabela">Tabela</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Preço</th>
+          <th>Disponibilidade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Detergente</td>
+          <td>R$5,00</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Carne</td>
+          <td>R$20,00</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Pao</td>
+          <td>R$1,00</td>
+          <td>5</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <h3 id="formulario">Formulário</h3>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" autocomplete="on">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Digite seu email" required autocomplete="on">
+        <button type="submit">Salvar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>Feito por Mateus</p>
+    <a href="#topo">Voltar ao topo</a>
+  </footer>
+</body>
+
+</html>
