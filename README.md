@@ -7,6 +7,6 @@
 
 > * `1_semestre`: Projetos do primeiro semestre.
 > * `2_semestre`: Projetos e exercícios do segundo semestre.
-> * *(Novos semestres serão adicionados conforme a progressão do curso).*
+> * `3_semestre`: Projetos e exercícios do terceiro semestre.
  
 > Este repositório serve como portfólio e histórico da minha jornada acadêmica na área de tecnologia.
