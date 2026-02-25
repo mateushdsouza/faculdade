@@ -12,8 +12,6 @@ public class Main {
         funcionarios.add(new Desenvolvedor("Mateus", "235.254.255-14", 3000, 250));
 
         for (Funcionario f : funcionarios)  {
-            qqqqq
-
             f.exibirDados();
             System.out.println("--------------------");
         }
