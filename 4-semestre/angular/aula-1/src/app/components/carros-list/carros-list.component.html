@@ -1,0 +1,18 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome</th>
+      <th>Marca</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (carro of lista; track carro.id) {
+    <tr>
+      <td>{{carro.id}}</td>
+      <td>{{carro.nome}}</td>
+      <td>{{carro.marca}}</td>
+    </tr>
+  }
+  </tbody>
+</table>
