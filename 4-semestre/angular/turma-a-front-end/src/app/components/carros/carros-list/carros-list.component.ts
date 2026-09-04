@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { Carro } from '../../../models/carro';
+import { CarrosService } from '../../../services/carros.service';
 
 @Component({
   selector: 'app-carros-list',
@@ -9,6 +10,27 @@ import { Carro } from '../../../models/carro';
   styleUrl: './carros-list.component.scss'
 })
 export class CarrosListComponent {
+  carroService = inject(CarrosService);
+
+  ngOnInit() {
+    this.findAll();
+  }
+  findAll() {
+    this.carroService.listAll().subscribe({
+      next: (retorno) => {
+        this.lista = retorno;
+      }
+      error:(erro) => {
+        console.log(erro);
+        Swal.fire({
+          icon: "error",
+          title: "Falha de carregamento",
+          text: "Ocorreu um erro ao tentar carregar a lista",
+        });
+      }
+    })
+  }
+
 
   lista: Carro[] = []
 
@@ -42,6 +64,8 @@ export class CarrosListComponent {
   }
 
   deletar(carro: Carro) {
-    
+    Swal.fire({
+      t
+    })
   }
 }
