@@ -10,13 +10,13 @@ import java.util.List;
 @Repository
 @Getter
 public class ListaRepository {
-    private ArrayList<Integer> numeros = new List();
+    private final List<Integer> numeros = new ArrayList<>();
 
-    private void adicionarNumero(Integer numero) {
+    public void adicionarNumero(Integer numero) {
         if (numeros.size() < 3) {
             numeros.add(numero);
         } else {
-            throw new IllegalStateException("A lista ja possui 3 numeros")
+            throw new IllegalStateException("A lista ja possui 3 numeros");
         }
     }
 

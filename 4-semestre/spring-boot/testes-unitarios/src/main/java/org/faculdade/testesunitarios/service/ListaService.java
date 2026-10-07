@@ -2,16 +2,19 @@ package org.faculdade.testesunitarios.service;
 
 import lombok.AllArgsConstructor;
 import org.faculdade.testesunitarios.repository.ListaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @AllArgsConstructor
 public class ListaService {
     private final ListaRepository listaRepository;
 
-    public void adicionarNumeros(Integer numero) {
-        listaRepository.adicionarNumero(numero);
+    public void adicionarNumeros(List<Integer> numeros) {
+        for (Integer numero : numeros) {
+            listaRepository.adicionarNumero(numero);
+        }
     }
 
     public Integer maiorNumero() {
