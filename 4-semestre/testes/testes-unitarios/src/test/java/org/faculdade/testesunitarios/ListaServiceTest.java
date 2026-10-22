@@ -211,4 +211,12 @@ class ListaServiceTest {
                 () -> listaService.multiplicacao()
         );
     }
-}
+
+    @Test
+    @DisplayName("Deve adicionar os números recebidos à lista")
+    void deveAdicionarNumerosRecebidos() {
+        listaService.adicionarNumeros(java.util.List.of(10, 20, 30));
+
+        assertThat(listaRepository.getNumeros()).containsExactly(10, 20, 30);
+        assertEquals(3, listaService.qtdNumeros());
+    }}
