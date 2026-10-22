@@ -219,4 +219,5 @@ class ListaServiceTest {
 
         assertThat(listaRepository.getNumeros()).containsExactly(10, 20, 30);
         assertEquals(3, listaService.qtdNumeros());
-    }}
+    }
+}
